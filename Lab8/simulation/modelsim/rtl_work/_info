@@ -1,0 +1,106 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dZ:/ELEN21/Lab8/simulation/modelsim
+vpong4
+Z1 !s110 1607057654
+!i10b 1
+!s100 X5_d736Y2CUB9GC0jSaUj0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ISnIz14V]RE@fJR7H@[Xc`0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1606955488
+Z5 8Z:/ELEN21/Lab8/Lab8.v
+Z6 FZ:/ELEN21/Lab8/Lab8.v
+!i122 0
+L0 2 39
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1607057653.000000
+Z9 !s107 Z:/ELEN21/Lab8/Lab8.v|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/ELEN21/Lab8|Z:/ELEN21/Lab8/Lab8.v|
+!i113 1
+Z11 o-vlog01compat -work work
+Z12 !s92 -vlog01compat -work work +incdir+Z:/ELEN21/Lab8
+Z13 tCvgOpt 0
+vpong_controller1
+R1
+!i10b 1
+!s100 cdo1:08]<hlIiA:HW7blk1
+R2
+I[2de=dcl;d[`UHfWTAk5<3
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 43 36
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
+vPongBlock
+!s110 1607058255
+!i10b 1
+!s100 ZlY_YQWDb5VmgfnX8H7`I3
+R2
+Ihb57VChgNjV7YA[8nY1a73
+R3
+R0
+w1607057551
+8Z:/ELEN21/Lab8/PongBlock.v
+FZ:/ELEN21/Lab8/PongBlock.v
+!i122 5
+L0 20 52
+R7
+r1
+!s85 0
+31
+!s108 1607058254.000000
+!s107 Z:/ELEN21/Lab8/PongBlock.v|
+!s90 -reportprogress|300|-work|work|Z:/ELEN21/Lab8/PongBlock.v|
+!i113 1
+Z14 o-work work
+R13
+n@pong@block
+vtb
+!s110 1607058256
+!i10b 1
+!s100 mchzPnaVckEJ_LUP?7U=^2
+R2
+I;P`zLglK1k5e4bHo4XMZJ0
+R3
+R0
+w1607058240
+8Z:/ELEN21/Lab8/verilog_lab8_tb.v
+FZ:/ELEN21/Lab8/verilog_lab8_tb.v
+!i122 6
+L0 1 38
+R7
+r1
+!s85 0
+31
+!s108 1607058255.000000
+!s107 Z:/ELEN21/Lab8/verilog_lab8_tb.v|
+!s90 -reportprogress|300|-work|work|Z:/ELEN21/Lab8/verilog_lab8_tb.v|
+!i113 1
+R14
+R13

@@ -1,0 +1,60 @@
+|PongBlock
+LSI <= pong_controller1:inst.LSI
+clk => pong_controller1:inst.CLK
+clk => pong4:inst2.clk
+q[0] <= pong4:inst2.q[0]
+q[1] <= pong4:inst2.q[1]
+q[2] <= pong4:inst2.q[2]
+q[3] <= pong4:inst2.q[3]
+rsi => pong4:inst2.rsi
+x[0] => pong4:inst2.x[0]
+x[1] => pong4:inst2.x[1]
+x[2] => pong4:inst2.x[2]
+x[3] => pong4:inst2.x[3]
+iRESET => pong_controller1:inst.iRESET
+iRSRV => pong_controller1:inst.iRSRV
+S[0] <= pong_controller1:inst.S[0]
+S[1] <= pong_controller1:inst.S[1]
+
+
+|PongBlock|pong_controller1:inst
+CLK => currState~1.DATAIN
+QLEFT => nextState.DATAA
+QLEFT => nextState.DATAA
+iRESET => nextState.OUTPUTSELECT
+iRESET => nextState.OUTPUTSELECT
+iRESET => Selector0.IN2
+iRESET => Selector0.IN3
+iRESET => Selector1.IN1
+iRSRV => nextState.sRSRV.DATAB
+iRSRV => Selector0.IN1
+LSI <= LSI.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PongBlock|pong4:inst2
+x[0] => ~NO_FANOUT~
+x[1] => ~NO_FANOUT~
+x[2] => ~NO_FANOUT~
+x[3] => ~NO_FANOUT~
+rsi => q.DATAB
+lsi => q.DATAB
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+s[0] => always0.IN0
+s[0] => always0.IN0
+s[0] => always0.IN0
+s[0] => always0.IN0
+s[1] => always0.IN1
+s[1] => always0.IN1
+s[1] => always0.IN1
+s[1] => always0.IN1
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
