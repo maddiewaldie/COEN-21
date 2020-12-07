@@ -1,0 +1,111 @@
+|Lab5
+SOUT <= myfulladd:inst.SOUT
+A => myfulladd:inst.A
+B => myfulladd:inst.B
+CIN => myfulladd:inst.CIN
+COUT <= myfulladd:inst.COUT
+v <= myadder4:inst4.v
+c0 => myadder4:inst4.c0
+X4[0] => myadder4:inst4.x[0]
+X4[1] => myadder4:inst4.x[1]
+X4[2] => myadder4:inst4.x[2]
+X4[3] => myadder4:inst4.x[3]
+Y4[0] => myadder4:inst4.y[0]
+Y4[1] => myadder4:inst4.y[1]
+Y4[2] => myadder4:inst4.y[2]
+Y4[3] => myadder4:inst4.y[3]
+c4 <= myadder4:inst4.c4
+S4[0] <= myadder4:inst4.s[0]
+S4[1] <= myadder4:inst4.s[1]
+S4[2] <= myadder4:inst4.s[2]
+S4[3] <= myadder4:inst4.s[3]
+
+
+|Lab5|myfulladd:inst
+A => SOUT.IN0
+A => COUT.IN0
+A => COUT.IN0
+B => SOUT.IN1
+B => COUT.IN1
+B => COUT.IN0
+CIN => SOUT.IN1
+CIN => COUT.IN1
+CIN => COUT.IN1
+SOUT <= SOUT.DB_MAX_OUTPUT_PORT_TYPE
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|myadder4:inst4
+x[0] => x[0].IN1
+x[1] => x[1].IN1
+x[2] => x[2].IN1
+x[3] => x[3].IN1
+y[0] => y[0].IN1
+y[1] => y[1].IN1
+y[2] => y[2].IN1
+y[3] => y[3].IN1
+c0 => c0.IN1
+c4 <= myfulladd:comb_6.port4
+s[0] <= myfulladd:comb_3.port3
+s[1] <= myfulladd:comb_4.port3
+s[2] <= myfulladd:comb_5.port3
+s[3] <= myfulladd:comb_6.port3
+v <= v.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|myadder4:inst4|myfulladd:comb_3
+A => SOUT.IN0
+A => COUT.IN0
+A => COUT.IN0
+B => SOUT.IN1
+B => COUT.IN1
+B => COUT.IN0
+CIN => SOUT.IN1
+CIN => COUT.IN1
+CIN => COUT.IN1
+SOUT <= SOUT.DB_MAX_OUTPUT_PORT_TYPE
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|myadder4:inst4|myfulladd:comb_4
+A => SOUT.IN0
+A => COUT.IN0
+A => COUT.IN0
+B => SOUT.IN1
+B => COUT.IN1
+B => COUT.IN0
+CIN => SOUT.IN1
+CIN => COUT.IN1
+CIN => COUT.IN1
+SOUT <= SOUT.DB_MAX_OUTPUT_PORT_TYPE
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|myadder4:inst4|myfulladd:comb_5
+A => SOUT.IN0
+A => COUT.IN0
+A => COUT.IN0
+B => SOUT.IN1
+B => COUT.IN1
+B => COUT.IN0
+CIN => SOUT.IN1
+CIN => COUT.IN1
+CIN => COUT.IN1
+SOUT <= SOUT.DB_MAX_OUTPUT_PORT_TYPE
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5|myadder4:inst4|myfulladd:comb_6
+A => SOUT.IN0
+A => COUT.IN0
+A => COUT.IN0
+B => SOUT.IN1
+B => COUT.IN1
+B => COUT.IN0
+CIN => SOUT.IN1
+CIN => COUT.IN1
+CIN => COUT.IN1
+SOUT <= SOUT.DB_MAX_OUTPUT_PORT_TYPE
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+
+

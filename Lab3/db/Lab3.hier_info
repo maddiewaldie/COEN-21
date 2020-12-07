@@ -1,0 +1,25 @@
+|Lab3
+CL <= CS.DB_MAX_OUTPUT_PORT_TYPE
+CS => CL.DATAIN
+CS => inst5.IN0
+CS => inst13.IN0
+CS => inst11.IN0
+CS => inst17.IN0
+LL <= inst.DB_MAX_OUTPUT_PORT_TYPE
+LS => inst.IN0
+LS => inst10.IN0
+LS => inst12.IN0
+LS => inst11.IN1
+LS => inst17.IN1
+RR => inst4.IN0
+RR => inst9.IN1
+RS => inst3.IN0
+RS => inst8.IN0
+RS => inst12.IN1
+RS => inst13.IN1
+RS => inst16.IN1
+RL <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+T1 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+T0 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+
+

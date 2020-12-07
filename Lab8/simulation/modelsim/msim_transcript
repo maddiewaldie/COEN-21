@@ -1,0 +1,148 @@
+# Reading pref.tcl
+# do Lab8_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/Apps/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+Z:/ELEN21/Lab8 {Z:/ELEN21/Lab8/Lab8.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:54:13 on Dec 03,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Z:/ELEN21/Lab8" Z:/ELEN21/Lab8/Lab8.v 
+# -- Compiling module pong4
+# -- Compiling module pong_controller1
+# 
+# Top level modules:
+# 	pong4
+# 	pong_controller1
+# End time: 20:54:14 on Dec 03,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/PongBlock.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:54:32 on Dec 03,2020
+# vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/PongBlock.v 
+# -- Compiling module PongBlock
+# 
+# Top level modules:
+# 	PongBlock
+# End time: 20:54:32 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/verilog_lab8_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:54:32 on Dec 03,2020
+# vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/verilog_lab8_tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 20:54:33 on Dec 03,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.tb
+# vsim work.tb 
+# Start time: 20:54:40 on Dec 03,2020
+# Loading work.tb
+# Loading work.PongBlock
+# Loading work.pong_controller1
+# Loading work.pong4
+# ** Error (suppressible): (vsim-3389) Port 'x' not found in the connected module (1st connection).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut File: Z:/ELEN21/Lab8/verilog_lab8_tb.v Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'rsi' not found in the connected module (2nd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut File: Z:/ELEN21/Lab8/verilog_lab8_tb.v Line: 14
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'b2v_inst1'.  Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/b2v_inst1 File: Z:/ELEN21/Lab8/PongBlock.v Line: 61
+# ** Warning: (vsim-3722) Z:/ELEN21/Lab8/PongBlock.v(61): [TFMPC] - Missing connection for port 'x'.
+# Error loading design
+# End time: 20:54:41 on Dec 03,2020, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 2
+vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/PongBlock.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:00:53 on Dec 03,2020
+# vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/PongBlock.v 
+# -- Compiling module PongBlock
+# 
+# Top level modules:
+# 	PongBlock
+# End time: 21:00:53 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/verilog_lab8_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:00:54 on Dec 03,2020
+# vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/verilog_lab8_tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 21:00:54 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb
+# vsim work.tb 
+# Start time: 21:01:01 on Dec 03,2020
+# Loading work.tb
+# Loading work.PongBlock
+# Loading work.pong_controller1
+# Loading work.pong4
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'b2v_inst1'.  Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/b2v_inst1 File: Z:/ELEN21/Lab8/PongBlock.v Line: 61
+# ** Warning: (vsim-3722) Z:/ELEN21/Lab8/PongBlock.v(61): [TFMPC] - Missing connection for port 'x'.
+add wave -position insertpoint  \
+sim:/tb/clk \
+sim:/tb/iRESET \
+sim:/tb/iRSRV \
+sim:/tb/LSI \
+sim:/tb/q \
+sim:/tb/S
+run -all
+# ** Note: $finish    : Z:/ELEN21/Lab8/verilog_lab8_tb.v(43)
+#    Time: 450 ps  Iteration: 0  Instance: /tb
+# 1
+# Break in Module tb at Z:/ELEN21/Lab8/verilog_lab8_tb.v line 43
+vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/PongBlock.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:14 on Dec 03,2020
+# vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/PongBlock.v 
+# -- Compiling module PongBlock
+# 
+# Top level modules:
+# 	PongBlock
+# End time: 21:04:15 on Dec 03,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/verilog_lab8_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:15 on Dec 03,2020
+# vlog -reportprogress 300 -work work Z:/ELEN21/Lab8/verilog_lab8_tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 21:04:16 on Dec 03,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.tb
+# End time: 21:04:37 on Dec 03,2020, Elapsed time: 0:03:36
+# Errors: 0, Warnings: 2
+# vsim work.tb 
+# Start time: 21:04:37 on Dec 03,2020
+# Loading work.tb
+# Loading work.PongBlock
+# Loading work.pong_controller1
+# Loading work.pong4
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'b2v_inst1'.  Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/b2v_inst1 File: Z:/ELEN21/Lab8/PongBlock.v Line: 61
+# ** Warning: (vsim-3722) Z:/ELEN21/Lab8/PongBlock.v(61): [TFMPC] - Missing connection for port 'x'.
+add wave -position insertpoint  \
+sim:/tb/clk \
+sim:/tb/iRESET \
+sim:/tb/iRSRV \
+sim:/tb/LSI \
+sim:/tb/q \
+sim:/tb/S
+run -all
+# ** Note: $finish    : Z:/ELEN21/Lab8/verilog_lab8_tb.v(36)
+#    Time: 650 ps  Iteration: 0  Instance: /tb
+# 1
+# Break in Module tb at Z:/ELEN21/Lab8/verilog_lab8_tb.v line 36

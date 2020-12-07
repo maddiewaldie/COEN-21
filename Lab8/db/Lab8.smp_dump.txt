@@ -1,0 +1,7 @@
+
+State Machine - |PongBlock|pong_controller1:inst|currState
+Name currState.sENDL currState.sMOVL currState.sRSRV currState.sIDLE 
+currState.sIDLE 0 0 0 0 
+currState.sRSRV 0 0 1 1 
+currState.sMOVL 0 1 0 1 
+currState.sENDL 1 0 0 1 
